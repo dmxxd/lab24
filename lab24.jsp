@@ -28,7 +28,7 @@
                     for (int i = 1; i <= n; i++) fact *= i;
                     sum += (Math.pow(-1, n) * Math.pow(x, 2 * n)) / fact;
                 }
-                out.println("Сумма: " + sum);
+                System.out.println("Сумма: " + sum);
             }
         }
     %>
