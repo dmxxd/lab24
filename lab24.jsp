@@ -1,14 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Лабораторная работа 24</title>
+    <title>Лабораторная работа №24</title>
 </head>
 <body>
     <h2>Вычисление суммы ряда</h2>
     
     <form method="post">
-        Введите x: <input type="text" name="x"><br>
-        Введите верхний предел: <input type="text" name="lim"><br>
+        x: <input type="text" name="x"><br>
+        Верхний предел: <input type="text" name="lim"><br>
         <input type="submit" value="Вычислить">
     </form>
     <%
@@ -31,8 +31,6 @@
                     }
                     out.println("Сумма: " + sum);
                 }
-            } catch (NumberFormatException e) {
-                out.println("Ошибка ввода чисел");
             }
         }
     %>
