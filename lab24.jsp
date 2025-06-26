@@ -16,23 +16,19 @@
         String limParam = request.getParameter("lim");
         
         if (xParam != null && limParam != null) {
-            try {
-                double x = Double.parseDouble(xParam);
-                int lim = Integer.parseInt(limParam);
-                
-                if (lim <= 0) {
-                    out.println("Верхний предел должен быть > 0");
-                } else {
-                    double sum = 0;
-                    for (int n = 0; n < lim; n++) {
-                        long fact = 1;
-                        for (int i = 1; i <= n; i++) fact *= i;
-                        sum += (Math.pow(-1, n) * Math.pow(x, 2 * n)) / fact;
-                    }
-                    out.println("Сумма: " + sum);
+            double x = Double.parseDouble(xParam);
+            int lim = Integer.parseInt(limParam);
+            
+            if (lim <= 0) {
+                out.println("Верхний предел должен быть > 0");
+            } else {
+                double sum = 0;
+                for (int n = 0; n < lim; n++) {
+                    long fact = 1;
+                    for (int i = 1; i <= n; i++) fact *= i;
+                    sum += (Math.pow(-1, n) * Math.pow(x, 2 * n)) / fact;
                 }
-            } catch (NumberFormatException e) {
-                out.println("Ошибка ввода чисел");
+                out.println("Сумма: " + sum);
             }
         }
     %>
