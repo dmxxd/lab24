@@ -20,7 +20,7 @@
             int lim = Integer.parseInt(limParam);
             
             if (lim <= 0) {
-                out.println("Верхний предел должен быть > 0");
+                System.out.println("Верхний предел должен быть > 0");
             } else {
                 double sum = 0;
                 for (int n = 0; n < lim; n++) {
